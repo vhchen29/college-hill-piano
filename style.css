@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Avenir-Next', Arial, sans-serif;
+    src: url("assets/Avenir Next.ttc");
+}
+@font-face {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    src: url("assets/Georgia.ttf");
+}
+:root{
+--bg: #c3dbff;
+--brightblue: #3668fe;
+--gray: #909090;
+
+--off1: #d0ebff;
+--off2: #d0f8ff;
+--off3: #d0ffe7;
+--off4: #d0fff3;
+--off5: #d9ffdc;
+--off6: #e1ffd0;
+--off7: #efffd0;
+--off8: #fff8d0;
+
+}
+
+body{
+    background: var(--bg);
+    /* overflow: hidden; */
+}
+
+#street-lines {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   position: fixed;
+   z-index: 0;
+}
+
+.street-rectangle{
+    width: 100%;
+    height: 24px;
+    background: none;
+    border-top: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
+}
+
+#layout{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+}
+
+#piano{
+    width: 66%;
+    border: solid 4px red;
+}
+
+/*calendar heading*/
+h2{
+    font-family: 'Avenir-Next', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2.8px;
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+#calendar{
+    width: 34%;
+    border: solid 4px red;
+    justify-content: center; /*horizontal center*/
+    align-items: center; /*vertical center*/
+    display: flex;
+}
+
+#calendar-box{
+    width: 50%;
+    height: 90%;
+    border: 4px solid var(--gray);
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    
+}
+
