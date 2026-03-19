@@ -261,3 +261,19 @@ buttonBox.appendChild(col1);
 buttonBox.appendChild(col2);
 
 
+
+//info
+
+const overlay = document.getElementById('info-overlay');
+const closeBtn = document.getElementById('close-btn');
+const infoBtn = document.getElementById('info-btn');
+
+closeBtn.addEventListener('click', () => overlay.classList.add('hidden'));
+infoBtn.addEventListener('click', () => overlay.classList.remove('hidden'));
+
+// close if clicking outside the modal
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.add('hidden');
+});
+
+window.onload = () => overlay.classList.add('hidden');
