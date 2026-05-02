@@ -46,8 +46,8 @@ const calendar = {
     16: new DaySequence(16, [3,5,2,3]),
     17: new DaySequence(17, [3,7,2,7,8,3]),
     18: new DaySequence(18, [3,5,3,2,3]),
-    19: new DaySequence(19, []),
-    20: new DaySequence(20, []),
+    19: new DaySequence(19, [3,7,1,3,8,6,3]),
+    20: new DaySequence(20, [3,1,3]),
     21: new DaySequence(21, []),
     22: new DaySequence(22, []),
     23: new DaySequence(23, []),
@@ -57,8 +57,8 @@ const calendar = {
     27: new DaySequence(27, []),
     28: new DaySequence(28, []),
     29: new DaySequence(29, []),
-    30: new DaySequence(30, []),
-    31: new DaySequence(31, []),        
+    30: new DaySequence(30, [3,5,3,1,3]),
+    31: new DaySequence(31, [3,1,3,5,3,2,3,8,7,3]),        
 };
 //make it so if the day is empty i just make it gray
 //shouldn't be clickable

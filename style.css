@@ -245,7 +245,8 @@ body{
 
 
 .building-square{
-    background: var(--dark-gray);
+    /* background: var(--dark-gray); */
+    border: solid 2px var(--dark-gray);
     width: 8px;
     height: 8px;
     z-index: 1000;
