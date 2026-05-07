@@ -69,47 +69,47 @@ const calendar = {
     april: {
         title: "April 2026",
         days: {
-            1: new DaySequence(1, []),
-            2: new DaySequence(2, []),
-            3: new DaySequence(3, []),
+            1: new DaySequence(1, [3, 5,3,2,3]),
+            2: new DaySequence(2, [3,7,1,3]),
+            3: new DaySequence(3, [3,1,5,3,5,6,3]),
             4: new DaySequence(4, []),
-            5: new DaySequence(5, []),
-            6: new DaySequence(6, []),
-            7: new DaySequence(7, []),
-            8: new DaySequence(8, []),
-            9: new DaySequence(9, []),
-            10: new DaySequence(10, []),
+            5: new DaySequence(5, [3,5,3,6,3,5,3]),
+            6: new DaySequence(6, [3,1,5,3]),
+            7: new DaySequence(7, [3,7,1,6,5,1,3]),
+            8: new DaySequence(8, [3,2,3]),
+            9: new DaySequence(9, [3,7,1,5,3]),
+            10: new DaySequence(10, [3,1,3,5,3]),
             11: new DaySequence(11, []),
             12: new DaySequence(12, []),
             13: new DaySequence(13, []),
-            14: new DaySequence(14, []),
-            15: new DaySequence(15, []),
-            16: new DaySequence(16, []),
-            17: new DaySequence(17, []),
-            18: new DaySequence(18, []),
+            14: new DaySequence(14, [3,7,1,4,3]),
+            15: new DaySequence(15, [3,5,2,1,3]),
+            16: new DaySequence(16, [3,7,1,8,3]),
+            17: new DaySequence(17, [3,1,5,3]),
+            18: new DaySequence(18, [3,1,3,8,3]),
             19: new DaySequence(19, []),
-            20: new DaySequence(20, []),
-            21: new DaySequence(21, []),
-            22: new DaySequence(22, []),
-            23: new DaySequence(23, []),
-            24: new DaySequence(24, []),
-            25: new DaySequence(25, []),
+            20: new DaySequence(20, [3,5,3,4,2,3,6,3]),
+            21: new DaySequence(21, [3,1,5,3]),
+            22: new DaySequence(22, [3,5,2,3,1,3]),
+            23: new DaySequence(23, [3,7,1,3,8,6,3]),
+            24: new DaySequence(24, [3,1,5]),
+            25: new DaySequence(25, [3,8,3,6,3]),
             26: new DaySequence(26, []),
-            27: new DaySequence(27, []),
-            28: new DaySequence(28, []),
+            27: new DaySequence(27, [3,7,5,3,2,1,3,1,3]),
+            28: new DaySequence(28, [3,1,3,8,1,3]),
             29: new DaySequence(29, []),
-            30: new DaySequence(30, [])
+            30: new DaySequence(30, [3,1,3])
         }
     },
     may: {
         title: "May 2026",
         days: {
-        1: new DaySequence(1, []),
+        1: new DaySequence(1, [3,1,5,3,8,5,3]),
         2: new DaySequence(2, []),
         3: new DaySequence(3, []),
-        4: new DaySequence(4, []),
-        5: new DaySequence(5, []),
-        6: new DaySequence(6, []),
+        4: new DaySequence(4, [3,2,3,6,3]),
+        5: new DaySequence(5, [3,6,3]),
+        6: new DaySequence(6, [3,5,4,6,3,1,3]),
         7: new DaySequence(7, []),
         8: new DaySequence(8, []),
         9: new DaySequence(9, []),
@@ -197,6 +197,8 @@ let currentMonthIndex = 0;
 const buttonBox = document.getElementById("button-box");
 const monthTitle = document.querySelector("#calendar-box h2");
 
+
+//big daddy calendar function
 function generateCalendar(monthKey){
     buttonBox.innerHTML = "";
 
@@ -283,7 +285,7 @@ function generateCalendar(monthKey){
 
 generateCalendar(monthKeys[currentMonthIndex]);
 
- // outside the loop
+ //calendar button event listeners
 document.addEventListener("click", (e) => {
 
     if (
@@ -300,7 +302,7 @@ document.addEventListener("click", (e) => {
     }
 });
 
-//info
+//info blurb setup
 function setupInfoOverlay() {
     const overlay = document.getElementById("info-overlay");
     const closeBtn = document.getElementById("close-btn");
@@ -324,9 +326,9 @@ function setupInfoOverlay() {
         }
     });
 }
-
 setupInfoOverlay();
 
+//calendar page button setup
 function setupMonthButtons() {
 
     document.addEventListener("click", (e) => {
@@ -351,27 +353,13 @@ function setupMonthButtons() {
 
 
 }
-
 setupMonthButtons();
 
 
 
 
 
-// const overlay = document.getElementById('info-overlay');
-// const closeBtn = document.getElementById('close-btn');
-// const infoBtn = document.getElementById('info-btn');
 
-// overlay.classList.add('hidden');
-
-
-// closeBtn.addEventListener('click', () => overlay.classList.add('hidden'));
-// infoBtn.addEventListener('click', () => overlay.classList.remove('hidden'));
-
-// // close if clicking outside the modal
-// overlay.addEventListener('click', (e) => {
-//     if (e.target === overlay) overlay.classList.add('hidden');
-// });
 
 
 
