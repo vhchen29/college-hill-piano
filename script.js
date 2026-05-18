@@ -110,18 +110,18 @@ const calendar = {
         4: new DaySequence(4, [3,2,3,6,3]),
         5: new DaySequence(5, [3,6,3]),
         6: new DaySequence(6, [3,5,4,6,3,1,3]),
-        7: new DaySequence(7, []),
-        8: new DaySequence(8, []),
-        9: new DaySequence(9, []),
-        10: new DaySequence(10, []),
-        11: new DaySequence(11, []),
-        12: new DaySequence(12, []),
-        13: new DaySequence(13, []),
-        14: new DaySequence(14, []),
+        7: new DaySequence(7, [3,1,3]),
+        8: new DaySequence(8, [3,1,3]),
+        9: new DaySequence(9, [3,5,3]),
+        10: new DaySequence(10, [3,6,8,3]),
+        11: new DaySequence(11, [3,1,2,6,1,3]),
+        12: new DaySequence(12, [3,5,8,5,3]),
+        13: new DaySequence(13, [3,1,2,3,8,1,3]),
+        14: new DaySequence(14, [3,1,6,1,3,8,3]),
         15: new DaySequence(15, []),
         16: new DaySequence(16, []),
-        17: new DaySequence(17, []),
-        18: new DaySequence(18, []),
+        17: new DaySequence(17, [3,1,8,1,3]),
+        18: new DaySequence(18, [3,1,2,1,8,1,3]),
         19: new DaySequence(19, []),
         20: new DaySequence(20, []),
         21: new DaySequence(21, []),
@@ -213,13 +213,10 @@ function generateCalendar(monthKey){
     
     const totalDays = 31;
 
-
-
     for (let i = 1; i <= totalDays; i++) {
 
         const btn = document.createElement("button");
         btn.classList.add("day-btn");
-
 
         if(currentMonthIndex === 1 && i == 31){
              btn.textContent = "";
@@ -266,7 +263,7 @@ function generateCalendar(monthKey){
                     }
                 );
             });
-        } // <-- else closes here
+        } 
 
         if (i <= Math.ceil(totalDays / 2)) {
             col1.appendChild(btn);
@@ -274,10 +271,6 @@ function generateCalendar(monthKey){
             col2.appendChild(btn);
         }
     }
-
-   
-
-
 
     buttonBox.appendChild(col1);
     buttonBox.appendChild(col2);
